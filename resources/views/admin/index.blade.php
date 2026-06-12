@@ -37,6 +37,17 @@
                 </div>
             </a>
 
+            <!-- Opción: Gestionar Métodos de Pago -->
+            <a href="{{ route('admin.payment-methods.index') }}" class="group rounded-3xl border border-yellow-600/30 bg-black/70 p-6 shadow-lg shadow-yellow-900/10 transition hover:border-yellow-500/50 hover:bg-black/50">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="text-xl font-black uppercase tracking-tight text-white group-hover:text-yellow-300">Métodos de Pago</h3>
+                        <p class="mt-2 text-sm text-gray-400">Configura y edita formas de pago</p>
+                    </div>
+                    <span class="text-3xl">💳</span>
+                </div>
+            </a>
+
             <!-- Opción: Estadísticas (futura) -->
             <a href="#" class="group rounded-3xl border border-purple-600/30 bg-black/70 p-6 shadow-lg shadow-purple-900/10 transition hover:border-purple-500/50 hover:bg-black/50">
                 <div class="flex items-center justify-between">
@@ -113,7 +124,7 @@
                         </button>
                         <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
                             <span class="text-xs uppercase tracking-widest text-gray-400">ID {{ $product->id }}</span>
-                            <button type="submit" form="delete-product-{{ $product->id }}" class="rounded-full border border-red-500/30 bg-red-500/10 px-5 py-3 text-sm font-black uppercase tracking-widest text-red-400 transition hover:bg-red-500/20">
+                            <button type="submit" form="delete-product-{{ $product->id }}" class="rounded-full border border-red-500/30 bg-red-500/10 px-5 py-3 text-sm font-black uppercase tracking-widest text-red-300 transition hover:bg-red-500/20">
                                 🗑️ Eliminar
                             </button>
                         </div>
@@ -162,7 +173,7 @@
                         <span class="text-xs font-black uppercase tracking-widest text-gray-400">Badge</span>
                         <input name="badge" value="{{ old('badge') }}" class="mt-2 w-full rounded-3xl border border-blue-600/30 bg-black/80 px-4 py-3 text-white focus:border-blue-400 focus:outline-none">
                     </label>
-                    <button type="submit" class="inline-flex items-center justify-center rounded-full bg-green-500 px-6 py-3 text-sm font-black uppercase tracking-widest text-black transition hover:bg-green-600 w-full">
+                    <button type="submit" class="inline-flex items-center justify-center rounded-full bg-green-500 px-6 py-3 text-sm font-black uppercase tracking-widest text-black transition hover:bg-green-600">
                         ➕ Crear Producto
                     </button>
                 </div>
